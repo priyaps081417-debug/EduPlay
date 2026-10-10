@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --app-bg: #f8fafc;
+    --app-text: #0f172a;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --card-border-hover: #cbd5e1;
+    --accent-primary: #4f46e5;
+    --accent-secondary: #0ea5e9;
+    --accent-fun: #f59e0b;
+    --accent-mint: #10b981;
+    --badge-bg: #e0e7ff;
+    --badge-text: #4338ca;
+  }
+
+  [data-theme="creative-studio"],
+  .theme-creative-studio {
+    --app-bg: #f8faff;
+    --app-text: #1e293b;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --card-border-hover: #a5b4fc;
+    --accent-primary: #4f46e5;
+    --accent-secondary: #0284c7;
+    --badge-bg: #eef2ff;
+    --badge-text: #4338ca;
+  }
+
+  [data-theme="midnight-scholar"],
+  .theme-midnight-scholar {
+    --app-bg: #0b0f1e;
+    --app-text: #f8fafc;
+    --card-bg: #111827;
+    --card-border: #1e293b;
+    --card-border-hover: #4f46e5;
+    --accent-primary: #818cf8;
+    --accent-secondary: #38bdf8;
+    --badge-bg: #1e1b4b;
+    --badge-text: #c7d2fe;
+  }
+
+  [data-theme="sunset-cafe"],
+  .theme-sunset-cafe {
+    --app-bg: #181118;
+    --app-text: #fff1f2;
+    --card-bg: #221722;
+    --card-border: #3b2234;
+    --card-border-hover: #f97316;
+    --accent-primary: #fb923c;
+    --accent-secondary: #f43f5e;
+    --badge-bg: #3c1f2b;
+    --badge-text: #fed7aa;
+  }
+
+  [data-theme="mint-academy"],
+  .theme-mint-academy {
+    --app-bg: #091712;
+    --app-text: #f0fdf4;
+    --card-bg: #11221b;
+    --card-border: #1a382b;
+    --card-border-hover: #10b981;
+    --accent-primary: #34d399;
+    --accent-secondary: #2dd4bf;
+    --badge-bg: #064e3b;
+    --badge-text: #a7f3d0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  code, pre, kbd {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Creative Student Background Textures */
+.student-notebook-dots {
+  background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+.student-grid-paper {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+}
+
+.student-cosmic-stars {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Light Mode Overrides for Creative Studio */
+[data-theme="creative-studio"] body,
+.theme-creative-studio body {
+  background-color: #f8faff;
+  color: #1e293b;
+}
+
+[data-theme="creative-studio"] .bg-\[\#0b0f19\],
+.theme-creative-studio .bg-\[\#0b0f19\] {
+  background-color: #f8faff !important;
+}
+
+[data-theme="creative-studio"] header,
+.theme-creative-studio header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.05);
+}
+
+[data-theme="creative-studio"] nav,
+.theme-creative-studio nav {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="creative-studio"] .bg-slate-900,
+[data-theme="creative-studio"] .bg-slate-900\/60,
+[data-theme="creative-studio"] .bg-slate-900\/80,
+[data-theme="creative-studio"] .bg-slate-900\/90,
+.theme-creative-studio .bg-slate-900,
+.theme-creative-studio .bg-slate-900\/60,
+.theme-creative-studio .bg-slate-900\/80,
+.theme-creative-studio .bg-slate-900\/90 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 16px -1px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="creative-studio"] .bg-slate-950,
+[data-theme="creative-studio"] .bg-slate-950\/60,
+[data-theme="creative-studio"] .bg-slate-950\/70,
+[data-theme="creative-studio"] .bg-slate-950\/80,
+[data-theme="creative-studio"] .bg-slate-950\/90,
+.theme-creative-studio .bg-slate-950,
+.theme-creative-studio .bg-slate-950\/60,
+.theme-creative-studio .bg-slate-950\/70,
+.theme-creative-studio .bg-slate-950\/80,
+.theme-creative-studio .bg-slate-950\/90 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="creative-studio"] .border-slate-800,
+[data-theme="creative-studio"] .border-slate-800\/60,
+[data-theme="creative-studio"] .border-slate-800\/80,
+[data-theme="creative-studio"] .border-slate-900,
+.theme-creative-studio .border-slate-800,
+.theme-creative-studio .border-slate-800\/60,
+.theme-creative-studio .border-slate-800\/80,
+.theme-creative-studio .border-slate-900 {
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="creative-studio"] .text-white,
+.theme-creative-studio .text-white {
+  color: #0f172a !important;
+}
+
+[data-theme="creative-studio"] .text-slate-200,
+[data-theme="creative-studio"] .text-slate-300,
+.theme-creative-studio .text-slate-200,
+.theme-creative-studio .text-slate-300 {
+  color: #1e293b !important;
+}
+
+[data-theme="creative-studio"] .text-slate-400,
+.theme-creative-studio .text-slate-400 {
+  color: #475569 !important;
+}
+
+[data-theme="creative-studio"] .text-slate-500,
+.theme-creative-studio .text-slate-500 {
+  color: #64748b !important;
+}
+
+[data-theme="creative-studio"] footer,
+.theme-creative-studio footer {
+  background-color: #ffffff !important;
+  border-top-color: #e2e8f0 !important;
+}
+
+/* Custom student scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.08);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
+}
+
+/* Playful creative animations */
+@keyframes floatWiggle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(1deg);
+  }
+}
+
+.creative-float {
+  animation: floatWiggle 4s ease-in-out infinite;
+}
+
+@keyframes rainbowBorder {
+  0% { border-color: #6366f1; }
+  33% { border-color: #ec4899; }
+  66% { border-color: #f59e0b; }
+  100% { border-color: #10b981; }
+}
+
+.rainbow-focus:focus {
+  animation: rainbowBorder 3s infinite linear;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px -3px rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 3px rgba(99, 102, 241, 0.7);
+  }
+}
+
+.glow-indigo {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "EDUPLAY — Gamified NCERT EdTech Platform",
+  "description": "Modern, gamified, distraction-free educational platform by EduTech Titans featuring bite-sized NCERT concept cards, interactive playgrounds, quiz mode, and offline resilience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
